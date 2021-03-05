@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="bug" type="id"></item>
+    <item name="feedback" type="id"></item>
+</resources>

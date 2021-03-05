@@ -1,0 +1,49 @@
+open netbeans > file > new project > choose java web {default} > web application > next > name of your project > next> next > (project created)
+
+-- Create new webservice
+right click on project name(extreme left side of page) > create web services > give a name to project and package too > finish.
+
+--add new methods in web services.java file
+
+design  add operation> name (eg : f_to_c) >return type (double) >add >name of parameter (eg: f) >click on OK.
+
+Another operation from c to f perform same as above..
+
+-- ***Now add codes in method***
+ eg: in f to c
+Double c= (f - 32)*1.8;
+return c;
+
+to convert c to f
+Double f= (c*1.8)+35
+return f;
+
+right click on web series file > test web service..
+
+***create another project for client view***
+in index.html 
+create a html page with options like submit and buttons etc.
+
+--create two jsp page for both submit button
+
+right click on web page> new > select jsp >  file name to jsp ( f_c ) >folder > file created
+Do the same for another submit jsp button... file name(c_f)
+
+Right click on project file > select new > web service client (for visiting first time go to project name > new> others> web serices> web service client)
+click on browse > project name(services) > a url is generated > finish
+
+open jsp page  (c_f.jsp)
+right click in between the body section > select web service client resource / select call service operation.. (another window will appear)  expand your service file >expand serviceport> select what you want (eg: C to F ) it will add some code automatically in between body section 
+
+-- for c
+string d = request.getParameter("data")
+integer dd = integer.parseint(d)
+
+double c =dd;
+
+
+-- for f
+string f = request.getParameter("data")
+integer dd = integer.parseint(f)
+
+double f =dd;
